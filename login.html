@@ -140,5 +140,33 @@
             window.location.href = 'login.html';
         }
     </script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert("Right-click is disabled!");
+        });
+
+        // Disable F12 and Developer Tools Keyboard Shortcuts
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12' || event.ctrlKey && event.shiftKey && event.key === 'I' || event.ctrlKey && event.shiftKey && event.key === 'C') {
+                event.preventDefault();
+                alert("You cannot open developer tools!");
+            }
+        });
+    </script>
+    <script>
+    (function() {
+        let element = new Image();
+        Object.defineProperty(element, 'id', {
+            get: function() {
+                alert("You can't use the Inspect tool here!");
+                window.location.href = "about:blank"; // Redirect or block further attempts
+            }
+        });
+        console.log(element);
+    })();
+</script>
+
 </body>
 </html>
