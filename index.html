@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #95989e;
+            color: #fff;
+        }
+
+        .home-container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        a {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #df25fc;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        a:hover {
+            background-color: #178900;
+            text-decoration: underline;
+        }
+
+        a:active {
+            background-color: #3d6cd3;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome, Jansi Mahalakshmi!</h1>
+        <p>You're successfully logged in.</p>
+    </div>
+
+    
+    <a href="/question.html">Click here to Explore</a>
+
+
+    <script>
+        // Check if the user is logged in, else redirect to login page
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
